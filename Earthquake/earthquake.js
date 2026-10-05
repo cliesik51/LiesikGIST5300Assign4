@@ -1,4 +1,4 @@
-var map = L.map('weathermap').setView([38, -95], 4);
+var map = L.map('earthquakemap').setView([38, -95], 4);
 var basemapUrl = 'https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryTopo/MapServer/tile/{z}/{y}/{x}';
 var basemap =  L.tileLayer(basemapUrl, {attribution: 'Tiles courtesy of the <a href="https://usgs.gov/">U.S. Geological Survey</a>'}).addTo(map);
 
