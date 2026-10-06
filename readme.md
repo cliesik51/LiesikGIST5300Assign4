@@ -8,8 +8,9 @@ A map showing real-time weather radar and alerts from the National Weather Servi
 A map showing earthquake and seismic risk pattern.
 <https://cliesik51.github.io/LiesikGIST5300Assign4/Earthquake>
 
-For the EarthQuake Map I categorized the magnitudes using the graphic for the Richter Scale found at this link.
-<https://geovera.com/2023/04/27/history-richter-scale/>
+For the EarthQuake Map I used these Leaflet Tutorials to help me build my magnitude based symbology and add a legend to the map.
+<https://leafletjs.com/examples/geojson/>
+<https://leafletjs.com/examples/choropleth/>
 
 The Stack Overflow Post that helped me figure out how to make the time readable from the Unix Timestamp in the earthquake data.
 <https://stackoverflow.com/questions/847185/convert-a-unix-timestamp-to-time-in-javascript>
