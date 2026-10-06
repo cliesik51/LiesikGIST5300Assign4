@@ -6,12 +6,14 @@ var basemap =  L.tileLayer(basemapUrl, {attribution: 'Tiles &copy; Esri &mdash; 
 //add Earthquake layer
 var earthquakeUrl = 'https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson';
 $.getJSON(earthquakeUrl, function(data) {
-    //L.geoJSON(data).addTo(map);
+    
+  //L.geoJSON(data).addTo(map);
     L.geoJSON(data, {
       pointToLayer: function(feature, latlng) {
         return L.circleMarker(latlng, {})
       },
 
+      // Symbolize based on magnitude
       style: function(feature) {
         var magColor = 'transparent'; // Hides Colors not listed below
         if (feature.properties.mag >= 1.0 && feature.properties.mag <= 2.0) magColor = 'lightgreen'; // Micro
@@ -22,7 +24,16 @@ $.getJSON(earthquakeUrl, function(data) {
         if (feature.properties.mag >= 7.1 && feature.properties.mag <= 8.0) magColor = 'red'; // Major
         if (feature.properties.mag >= 8.1) magColor = 'darkred'; // Great
         return {color: magColor}
-      }  
+      },
+      // Add popups for each earthquake
+      onEachFeature: function(feature, layer) {
+                layer.bindPopup(
+                  'Location: ' + feature.properties.place +
+                  '<br> Magnitude: ' + feature.properties.mag +
+                  "<br> Time: " + new Date(feature.properties.time).toLocaleString() // the time is from the api is a Unix timestamp. The toLocaleString() converts it to match your machine's local time with the corresponding date.
+                );
+                
+            }
       }).addTo(map);
       
 });
