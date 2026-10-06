@@ -7,3 +7,6 @@ A map showing real-time weather radar and alerts from the National Weather Servi
 
 A map showing earthquake and seismic risk pattern.
 <https://cliesik51.github.io/LiesikGIST5300Assign4/Earthquake>
+
+For the EarthQuake Map I categorized the magnitudes using the graphic for the Richter Scale found at this link.
+<https://geovera.com/2023/04/27/history-richter-scale/>
