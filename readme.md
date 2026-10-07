@@ -9,7 +9,7 @@ The framework of this map comes from the Leaflet Web Application from Module 5. 
 <https://cliesik51.github.io/LiesikGIST5300Assign4/Weather>
 
 ### EarthQuake Activity Map
-Starting with the files from the Weather Alerts Map, I created 2 new files called "earthquake.js" and earthquake.css". From there I modified the basemap to highlight better contrast between the earthquake markers and changed the data url to read the USGS earthquake data. Following the linked Leaflet tutorials I generated a function called "getColor" to apply the color for each earthquake record based on magnitude. Then I created a legend variable and applied the matching colors from the "getColor" function. The Legend and corresponding colors were displayed by the 2 additional CSS entries from the Leaflet tutorials.
+Starting with the files from the Weather Alerts Map, I created 2 new files called "earthquake.js" and earthquake.css". From there I modified the basemap to highlight better contrast between the earthquake markers and changed the data url to read the USGS earthquake data. I tried to use the same workflow from the Weather Alerts Map to symbolize the earthquake events by magnitude, but was struggling to match them to my legend. Following the linked Leaflet tutorials I generated a function called "getColor" to apply the color for each earthquake record based on magnitude. Then I created a legend variable and applied the matching colors from the "getColor" function. The Legend and corresponding colors were displayed by the 2 additional CSS entries from the Leaflet tutorials.
 
 Leaflet Links:
 <https://leafletjs.com/examples/geojson/>
